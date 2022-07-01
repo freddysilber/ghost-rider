@@ -1,13 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import './sass/variables';
 /* This import is the prefered way */
 // @import '../dist/ng-ghost-rider/styles/ghost-rider.scss';
 
 /* Using this import for scully */
 @import '../projects/ng-ghost-rider/styles/ghost-rider.scss';
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Graduate&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa');
 
+@font-face {
+	font-family: 'Halloween';
+	src: url('./assets/fonts/HalloweenScript-mLmra.ttf');
+}
+
+@font-face {
+	font-family: 'Casper';
+	src: url('./assets/fonts/Casper.ttf');
+}
 * {
 	font-family: 'Comfortaa', sans-serif;
-	font-size: 16px;
+}
+
+// https://colorswall.com/palette/13062
+
+body {
+	background-color: $casper-dark;
+}
+
+button {
+	border: none;
+	border-radius: 5px;
+	background-color: #eee;
+	padding: 1rem;
+
+	&:hover {
+		background-color: rgb(219, 219, 219);
+	}
 }

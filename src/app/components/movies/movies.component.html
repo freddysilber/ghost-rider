@@ -1,26 +1,26 @@
-<h1
-	[ghostRiderStep]="{
-		name: 'tour.secondStep',
-		title: 'Step 2',
-		content: 'Look! We\'re in a new route!'
-	}"
-	(ghostRiderStepEvent)="handleEvent($event)"
->
-	Step 2
-</h1>
-<h1 [ghostRiderStep]="{
-	name: 'tour.thirdStep',
-	title: 'Step 3 title',
-	content: 'Step 3 content'
-}">
-	Step 3
-</h1>
-<h1
-	[ghostRiderStep]="{
-	name: 'tour.fourthStep',
-	title: 'Step 4 Title',
-	content: 'Fourth Step Content'
-}"
->
-	Step 4
-</h1>
+<div style="display: flex">
+	<h1
+		[ghostRiderStep]="{
+				name: 'tour.secondStep',
+				title: 'Step 2',
+				content: 'Look! We\'re in a new route!'
+			}"
+		(ghostRiderStepEvent)="handleEvent($event)"
+	>
+		Step 2
+	</h1>
+	<h1 [ghostRiderStep]="{
+			name: 'tour.thirdStep',
+			title: 'Step 3 title',
+			content: 'Step 3 content'
+		}">
+		Step 3
+	</h1>
+	<h1 [ghostRiderStep]="{
+			name: 'tour.fourthStep',
+			title: 'Step 4 Title',
+			content: 'Fourth Step Content'
+		}">
+		Step 4
+	</h1>
+</div>

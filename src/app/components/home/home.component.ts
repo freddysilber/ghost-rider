@@ -15,10 +15,7 @@ export class HomeComponent implements OnDestroy {
 		private readonly _router: Router,
 		private readonly _ghostRiderService: GhostRiderService,
 	) {
-		/**
-		 * We can kick off here... or do it on an 'action'
-		 */
-		// this.startTour();;
+		this.startTour();
 	}
 
 	ngOnDestroy(): void {
