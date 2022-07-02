@@ -1,18 +1,17 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { GhostRiderEvent, GhostRiderEventType } from 'ng-ghost-rider';
+import { GhostRiderEvent, GhostRiderEventType, GhostRiderModule } from 'ng-ghost-rider';
 
 @Component({
-	selector: 'app-movies',
-	templateUrl: 'movies.component.html',
-	styles: [`
-		h1 {
-			color: white;
-			margin: 1rem;
-		}
-	`],
+	selector: 'app-docs',
+	templateUrl: 'docs.component.html',
+	styleUrls: ['docs.component.scss'],
+	standalone: true,
+	imports: [
+		GhostRiderModule
+	],
 })
-export class MoviesComponent {
+export class DocsComponent {
 	constructor(
 		private readonly _router: Router,
 	) { }

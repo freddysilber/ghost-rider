@@ -47,7 +47,11 @@ $padding: 1rem;
 		justify-content: space-between;
 		align-items: center;
 		border-top: 1px solid #aaa;
-		padding: $padding;
+		padding: .25rem .25rem .25rem $padding;
+
+		span {
+			font-size: .8em;
+		}
 
 		.ghost-rider_back-button,
 		.ghost-rider_next-button,

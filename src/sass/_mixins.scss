@@ -1,0 +1,22 @@
+@mixin sticky($pos: 'top', $dist: 0, $zIndex: 10) {
+	position: sticky;
+	#{$pos}: $dist;
+	z-index: $zIndex;
+}
+
+@mixin flex-container-vertical() {
+	display: flex;
+	flex-direction: column;
+}
+
+@mixin flexi-fill-height() {
+	flex: 1 1 0%;
+	height: 0;
+	min-height: 0;
+}
+
+@mixin flexi-fill-width() {
+	flex: 1 1 0%;
+	width: 0;
+	min-width: 0;
+}

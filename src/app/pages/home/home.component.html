@@ -1,0 +1,44 @@
+<!-- class="slime" -->
+<h1
+	class="casper"
+	[ghostRiderStep]="{
+		name: 'tour.title',
+		title: 'Welcome!',
+		content: titleTpl
+	}"
+	(click)="startTour()"
+>
+	Ghost Rider
+</h1>
+
+<h2
+	class="subtitle"
+	[ghostRiderStep]="{
+		name: 'tour.subTitle',
+		title: 'Welcome!',
+		content: 'Step'
+	}"
+	(ghostRiderStepEvent)="handleEvent($event)"
+>
+	Create guided tours in Angular
+</h2>
+
+<button
+	class="documentation-button"
+	[routerLink]="['/documentation']"
+>
+	Documentation
+</button>
+
+<img
+	src="../../../assets/images/ghost.svg"
+	class="ghost"
+>
+
+<ng-template
+	cdkPortal
+	#titleTpl="cdkPortal"
+>
+	<p>Ghost Rider is a library for creating guided tours in Angular.</p>
+	<p>Let's check out what it can do!</p>
+</ng-template>

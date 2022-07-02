@@ -5,13 +5,9 @@ import { GhostRiderModule } from 'ng-ghost-rider';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GithubCorner } from './components/github-corner/github-corner.component';
-import { HomeComponent } from './components/home/home.component';
-import { MoviesComponent } from './components/movies/movies.component';
 
 const COMPONENTS = [
   AppComponent,
-  HomeComponent,
-  MoviesComponent,
   GithubCorner,
 ];
 
