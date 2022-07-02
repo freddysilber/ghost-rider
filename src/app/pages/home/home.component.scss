@@ -6,42 +6,48 @@
 	@include flexi-fill-height();
 }
 
-.casper {
-	font-weight: 100;
-	text-align: center;
-	width: fit-content;
-	color: black;
-	font-family: 'Casper', sans-serif;
-	font-size: 10em;
-	margin: 0;
-	padding: 1.5rem;
+.title-container {
 	display: flex;
+	flex-direction: column;
 	align-self: center;
-	cursor: pointer;
-	text-shadow:
-		0 3px 1px white,
-		0 2px 1px white,
-		0 1px 1px white,
+	width: fit-content;
 
-		0 -3px 1px white,
-		0 -2px 1px white,
-		0 -1px 1px white,
+	.casper {
+		font-weight: 100;
+		text-align: center;
+		width: fit-content;
+		color: black;
+		font-family: 'Casper', sans-serif;
+		font-size: 10em;
+		margin: 0;
+		padding: 1.5rem;
+		cursor: pointer;
+		text-shadow:
+			0 3px 1px white,
+			0 2px 1px white,
+			0 1px 1px white,
 
-		3px 0 1px white,
-		2px 0 1px white,
-		1px 0 1px white,
+			0 -3px 1px white,
+			0 -2px 1px white,
+			0 -1px 1px white,
 
-		-3px 0 1px white,
-		-2px 0 1px white,
-		-1px 0 1px white,
+			3px 0 1px white,
+			2px 0 1px white,
+			1px 0 1px white,
 
-		10px 15px 25px white;
+			-3px 0 1px white,
+			-2px 0 1px white,
+			-1px 0 1px white,
+
+			10px 15px 25px white;
+	}
+
+	h2.subtitle {
+		color: white;
+		text-align: center;
+	}
 }
 
-h2.subtitle {
-	color: white;
-	text-align: center;
-}
 
 .slime {
 	font-weight: 100;
