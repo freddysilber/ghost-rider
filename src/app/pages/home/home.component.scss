@@ -66,15 +66,7 @@ button.documentation-button {
 	align-self: center;
 	padding: .75rem;
 	font-weight: bold;
+	margin-top: 2rem;
 	background-color: $orange;
 	color: $casper-dark;
-}
-
-img.ghost {
-	width: 400px;
-	position: fixed;
-	bottom: 0;
-	right: 0;
-	transform: rotate(-45deg);
-	opacity: .6;
 }

@@ -1,28 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import './sass/variables';
+
 /* This import is the prefered way */
 // @import '../dist/ng-ghost-rider/styles/ghost-rider.scss';
 
 /* Using this import for scully */
 @import '../projects/ng-ghost-rider/styles/ghost-rider.scss';
+
+// Add Google fonts here
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa');
 
-@font-face {
-	font-family: 'Halloween';
-	src: url('./assets/fonts/HalloweenScript-mLmra.ttf');
-}
+/* include CSS for prism toolbar */
+@import '~prismjs/plugins/toolbar/prism-toolbar.css';
+
+/* check node_modules/prismjs/themes/ for the available themes */
+@import '~prismjs/themes/prism-tomorrow';
+
+// @font-face {
+// 	font-family: 'Halloween';
+// 	src: url('./assets/fonts/HalloweenScript-mLmra.ttf');
+// }
 
 @font-face {
 	font-family: 'Casper';
-	src: url('./assets/fonts/Casper.ttf');
+	src: url('assets/fonts/Casper.ttf');
 }
 
 * {
 	font-family: 'Comfortaa', sans-serif;
 }
-
-// https://colorswall.com/palette/13062
 
 body {
 	background-color: $casper-dark;
@@ -38,4 +45,13 @@ button {
 	&:hover {
 		background-color: rgb(219, 219, 219);
 	}
+}
+img.ghost {
+	width: 400px;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	transform: rotate(-45deg);
+	opacity: .6;
+	user-select: none;
 }

@@ -6,11 +6,13 @@ import { RouterModule } from '@angular/router';
     RouterModule.forRoot([
       {
         path: 'home',
-        loadComponent: () => import('./pages/home/home.component').then((mod) => mod.HomeComponent)
+        loadComponent: () => import('./pages/home/home.component').then((mod) => mod.HomeComponent),
+        title: 'Ghost Rider'
       },
       {
         path: 'documentation',
-        loadComponent: () => import('./pages/docs/docs.component').then((mod) => mod.DocsComponent)
+        loadComponent: () => import('./pages/docs/docs.component').then((mod) => mod.DocsComponent),
+        title: 'Ghost Rider - Docs'
       },
       {
         path: '',

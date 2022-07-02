@@ -28,8 +28,8 @@ export class HomeComponent {
 		this.startTour();
 	}
 
-	public handleEvent(event: GhostRiderEvent): void {
-		if (event.type === GhostRiderEventType.Next) {
+	public handleEvent(event: GhostRiderEvent | MouseEvent): void {
+		if (event.type === GhostRiderEventType.Next || (event instanceof MouseEvent && !this._ghostRiderService.activeTour)) {
 			this._router.navigate(['documentation']);
 		}
 	}
@@ -41,7 +41,7 @@ export class HomeComponent {
 				[
 					new GhostRiderStep('title'),
 					new GhostRiderStep('documentation'),
-					new GhostRiderStep('secondStep'),
+					new GhostRiderStep('docsPage'),
 					new GhostRiderStep('thirdStep'),
 					new GhostRiderStep('fourthStep'),
 				]

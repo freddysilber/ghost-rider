@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { GhostRiderEvent, GhostRiderEventType, GhostRiderModule } from 'ng-ghost-rider';
 
 @Component({
@@ -8,7 +8,8 @@ import { GhostRiderEvent, GhostRiderEventType, GhostRiderModule } from 'ng-ghost
 	styleUrls: ['docs.component.scss'],
 	standalone: true,
 	imports: [
-		GhostRiderModule
+		GhostRiderModule,
+		RouterModule,
 	],
 })
 export class DocsComponent {

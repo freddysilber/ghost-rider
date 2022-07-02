@@ -20,16 +20,11 @@
 		title: 'Let\'s See Some Features!',
 		content: documentationTpl
 	}"
-	ghostRiderStepAdvance
+	(ghostRiderStepAdvance)="handleEvent($event)"
 	(ghostRiderStepEvent)="handleEvent($event)"
 >
 	Documentation
 </button>
-
-<img
-	src="assets/images/ghost.svg"
-	class="ghost"
->
 
 <ng-template
 	cdkPortal
