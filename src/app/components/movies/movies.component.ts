@@ -5,6 +5,12 @@ import { GhostRiderEvent, GhostRiderEventType } from 'ng-ghost-rider';
 @Component({
 	selector: 'app-movies',
 	templateUrl: 'movies.component.html',
+	styles: [`
+		h1 {
+			color: white;
+			margin: 1rem;
+		}
+	`],
 })
 export class MoviesComponent {
 	constructor(
