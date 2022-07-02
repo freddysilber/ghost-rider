@@ -1,6 +1,6 @@
 <!-- <h1 align="center">👻 Ghost Rider</h1> -->
 <h1 align="center">
-<img valign="bottom" src="https://github.com/freddysilber/ghost-rider/blob/main/src/assets/images/ghost.svg" style="width: 40px;"> Ghost Rider
+<img valign="bottom" src="https://github.com/freddysilber/ghost-rider/blob/main/src/assets/images/ghost.svg" style="width: 40px; max-width: 40px;"> Ghost Rider
 </h1>
 <p align="center">A library for creating guided tours in angular. Ghost ride the whip!</p>
 <hr/>
