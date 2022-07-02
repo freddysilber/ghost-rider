@@ -40,7 +40,7 @@ export class HomeComponent {
 				'tour',
 				[
 					new GhostRiderStep('title'),
-					new GhostRiderStep('subTitle'),
+					new GhostRiderStep('documentation'),
 					new GhostRiderStep('secondStep'),
 					new GhostRiderStep('thirdStep'),
 					new GhostRiderStep('fourthStep'),

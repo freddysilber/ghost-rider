@@ -11,21 +11,17 @@
 	Ghost Rider
 </h1>
 
-<h2
-	class="subtitle"
-	[ghostRiderStep]="{
-		name: 'tour.subTitle',
-		title: 'Welcome!',
-		content: 'Step'
-	}"
-	(ghostRiderStepEvent)="handleEvent($event)"
->
-	Create guided tours in Angular
-</h2>
+<h2 class="subtitle">Create guided tours in Angular</h2>
 
 <button
 	class="documentation-button"
-	[routerLink]="['/documentation']"
+	[ghostRiderStep]="{
+		name: 'tour.documentation',
+		title: 'Let\'s See Some Features!',
+		content: documentationTpl
+	}"
+	ghostRiderStepAdvance
+	(ghostRiderStepEvent)="handleEvent($event)"
 >
 	Documentation
 </button>
@@ -41,4 +37,11 @@
 >
 	<p>Ghost Rider is a library for creating guided tours in Angular.</p>
 	<p>Let's check out what it can do!</p>
+</ng-template>
+
+<ng-template
+	cdkPortal
+	#documentationTpl="cdkPortal"
+>
+	<p>Click the button or click 'Next' in the step</p>
 </ng-template>
