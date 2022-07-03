@@ -76,3 +76,33 @@ button.documentation-button {
 	background-color: $orange;
 	color: $casper-dark;
 }
+
+div.details-container {
+	color: white;
+	display: grid;
+	grid-template-columns: 25% 25% 25%;
+	grid-template-rows: 15% 15% 15%;
+
+	>* {
+		padding: .5rem;
+		margin: 5px;
+		border-radius: 5px;
+
+		:not(p) {
+			text-shadow:
+				1px 1px 1px black,
+				4px 5px 6px white,
+				13px 10px 21px white;
+		}
+	}
+
+	:nth-child(2) {
+		grid-row-start: 2;
+		grid-column-start: 2;
+	}
+
+	:nth-child(3) {
+		grid-row-start: 3;
+		grid-column-start: 3;
+	}
+}

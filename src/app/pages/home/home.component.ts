@@ -40,6 +40,9 @@ export class HomeComponent {
 				'tour',
 				[
 					new GhostRiderStep('title'),
+					new GhostRiderStep('routerSupport'),
+					new GhostRiderStep('zeroDependencies'),
+					new GhostRiderStep('reactiveEvents'),
 					new GhostRiderStep('documentation'),
 					new GhostRiderStep('docsPage'),
 					new GhostRiderStep('thirdStep'),

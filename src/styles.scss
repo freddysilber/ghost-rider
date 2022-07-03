@@ -46,6 +46,7 @@ button {
 		background-color: rgb(219, 219, 219);
 	}
 }
+
 img.ghost {
 	width: 400px;
 	position: fixed;
@@ -54,4 +55,5 @@ img.ghost {
 	transform: rotate(-45deg);
 	opacity: .6;
 	user-select: none;
+	z-index: -1;
 }

@@ -1,3 +1,4 @@
+<!-- Title -->
 <div
 	[ghostRiderStep]="{
 		name: 'tour.title',
@@ -11,7 +12,7 @@
 	<h1 class="casper">Ghost Rider</h1>
 	<h2 class="subtitle">Create guided tours in Angular</h2>
 </div>
-
+<!-- Documentation Step / Button -->
 <button
 	class="documentation-button"
 	[ghostRiderStep]="{
@@ -24,12 +25,70 @@
 >
 	Documentation
 </button>
-
+<!-- Details -->
+<div class="details-container">
+	<div
+		[ghostRiderStep]="{
+			name: 'tour.routerSupport',
+			title: 'Why Routing?',
+			content: 'It would be frightening if your app didn\'t have multiple pages.'
+		}"
+		style="height: fit-content;"
+	>
+		<h2>
+			<span
+				class="iconify"
+				data-icon="simple-line-icons:ghost"
+				style="color: white;"
+			></span>
+			Router Support
+		</h2>
+		<p>Ghost Rider is reactive so steps won't get ghosted when nagivating to other pages and routes</p>
+	</div>
+	<div
+		[ghostRiderStep]="{
+			name: 'tour.zeroDependencies',
+			title: 'TODO!',
+			content: 'TODO'
+		}"
+		style="height: fit-content;"
+	>
+		<h2>
+			<span
+				class="iconify"
+				data-icon="simple-line-icons:ghost"
+				style="color: white;"
+			></span>
+			Zero Dependencies
+		</h2>
+		<p>Boo-lieve it or not, there are no external libraries haunting us</p>
+	</div>
+	<div
+		[ghostRiderStep]="{
+			name: 'tour.reactiveEvents',
+			title: 'TODO!',
+			content: 'TODO'
+		}"
+		style="height: fit-content;"
+	>
+		<h2>
+			<span
+				class="iconify"
+				data-icon="simple-line-icons:ghost"
+				style="color: white;"
+			></span>
+			Reactive Events and Hooks
+		</h2>
+		<p>Each step of a tour provides it's own set of events and hooks for a customizable experience with no dead ends</p>
+	</div>
+</div>
+<!-- Step Templates -->
 <ng-template
 	cdkPortal
 	#titleTpl="cdkPortal"
 >
-	<p>Ghost Rider is a library for creating guided tours in Angular.</p>
+	<p>Lift your spirits with <b>Ghost Rider</b>, a tool to bring your onboarding process out of the graveyard!</p>
+	<!-- <p>Ghost Rider is a library for creating guided tours in Angular.</p> -->
 	<p>Let's check out what it can do!</p>
 </ng-template>
 
