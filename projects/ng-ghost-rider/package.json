@@ -1,7 +1,14 @@
 {
   "name": "ng-ghost-rider",
-  "version": "0.0.21-beta",
+  "version": "0.0.22-beta",
   "license": "MIT",
+  "description": "Create guided tours in Angular",
+  "author": {
+    "email": "freddy.silber@gmail.com",
+    "name": "Freddy Silber",
+    "url": "https://github.com/freddysilber"
+  },
+  "homepage": "https://freddysilber.github.io/ghost-rider/home",
   "repository": {
     "url": "https://github.com/freddysilber/ghost-rider"
   },
