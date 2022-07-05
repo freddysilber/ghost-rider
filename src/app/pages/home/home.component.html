@@ -6,33 +6,35 @@
 		content: titleTpl
 	}"
 	(click)="startTour()"
-	class="title-container"
+	class="flex flex-col self-center w-fit m-0.5"
 >
 	<!-- class="slime" -->
-	<h1 class="casper">Ghost Rider</h1>
-	<h2 class="text-2xl subtitle">Create guided tours in Angular</h2>
+	<h1 class="casper text-center w-fit m-0 p-1.5 cursor-pointer text-black font-thin">Ghost Rider</h1>
+	<h2 class="text-2xl text-white text-center">Create guided tours in Angular</h2>
 </div>
 <!-- Documentation Step / Button -->
-<!-- class="documentation-button" -->
-<button
-	class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
-	[ghostRiderStep]="{
-		name: 'tour.documentation',
-		title: 'Let\'s See Some Features!',
-		content: documentationTpl
-	}"
-	(ghostRiderStepAdvance)="handleEvent($event)"
-	(ghostRiderStepEvent)="handleEvent($event)"
->
-	Documentation
-</button>
+<div class="flex justify-center mt-4">
+	<button
+		class="w-fit bg-red-700 hover:bg-red-900 text-white font-bold py-2 px-4 rounded-full"
+		[ghostRiderStep]="{
+			name: 'tour.documentation',
+			title: 'Let\'s See Some Features!',
+			content: documentationTpl
+		}"
+		(ghostRiderStepAdvance)="handleEvent($event)"
+		(ghostRiderStepEvent)="handleEvent($event)"
+	>
+		Documentation
+	</button>
+</div>
 <!-- Details -->
-<div class="details-container">
+<div class="details-container text-white grid">
 	<div
 		[ghostRiderStep]="{
 			name: 'tour.routerSupport',
 			title: 'Why Routing?',
-			content: 'It would be frightening if your app didn\'t have multiple pages.'
+			content: 'It would be frightening if your app didn\'t have multiple pages.',
+			position: 'after'
 		}"
 		class="step-container"
 	>
@@ -63,7 +65,8 @@
 		[ghostRiderStep]="{
 			name: 'tour.reactiveEvents',
 			title: '💡 Tip!',
-			content: 'Steps can emit events when a tour starts, ends, and navigating to and from other steps. You can learn more in the documentation section.'
+			content: 'Steps can emit events when a tour starts, ends, and navigating to and from other steps. You can learn more in the documentation section.',
+			position: 'after'
 		}"
 		class="step-container"
 	>
@@ -96,12 +99,12 @@
 	#sellingPointTpl
 	let-details
 >
-	<div class="selling-point-container">
+	<div class="flex">
 		<span
-			class="ghost-icon iconify"
+			class="iconify text-white w-5 h-5 mr-2"
 			data-icon="simple-line-icons:ghost"
 		></span>
-		<h2>{{ details.title }}</h2>
+		<h2 class="m-0">{{ details.title }}</h2>
 	</div>
 	<p>{{ details.text }}</p>
 </ng-template>

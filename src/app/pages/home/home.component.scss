@@ -6,82 +6,49 @@
 	@include flexi-fill-height();
 }
 
-.title-container {
-	display: flex;
-	flex-direction: column;
-	align-self: center;
-	width: fit-content;
-	margin-top: .5rem;
+.casper {
+	font-family: 'Casper', sans-serif;
+	font-size: 10em;
+	text-shadow:
+		0 3px 1px white,
+		0 2px 1px white,
+		0 1px 1px white,
 
-	.casper {
-		font-weight: 100;
-		text-align: center;
-		width: fit-content;
-		color: black;
-		font-family: 'Casper', sans-serif;
-		font-size: 10em;
-		margin: 0;
-		padding: 1.5rem;
-		cursor: pointer;
-		text-shadow:
-			0 3px 1px white,
-			0 2px 1px white,
-			0 1px 1px white,
+		0 -3px 1px white,
+		0 -2px 1px white,
+		0 -1px 1px white,
 
-			0 -3px 1px white,
-			0 -2px 1px white,
-			0 -1px 1px white,
+		3px 0 1px white,
+		2px 0 1px white,
+		1px 0 1px white,
 
-			3px 0 1px white,
-			2px 0 1px white,
-			1px 0 1px white,
+		-3px 0 1px white,
+		-2px 0 1px white,
+		-1px 0 1px white,
 
-			-3px 0 1px white,
-			-2px 0 1px white,
-			-1px 0 1px white,
-
-			10px 15px 25px white;
-	}
-
-	// .slime {
-	// 	font-weight: 100;
-	// 	text-align: center;
-	// 	width: fit-content;
-	// 	color: white;
-	// 	font-family: 'Halloween', sans-serif;
-	// 	font-size: 5em;
-	// 	margin: 0;
-	// 	text-shadow:
-	// 		0 0 5px black,
-	// 		0 0 1px $slime,
-	// 		5px 10px 10px $slime,
-	// 		-5px -5px 15px $slime,
-	// 		-2px -2px 10px $slime,
-	// 		5px 1px 1px $slime;
-	// }
-
-	h2.subtitle {
-		color: white;
-		text-align: center;
-	}
+		10px 15px 25px white;
 }
 
-// button.documentation-button {
+// .slime {
+// 	font-weight: 100;
+// 	text-align: center;
 // 	width: fit-content;
-// 	display: flex;
-// 	align-self: center;
-// 	padding: .75rem;
-// 	font-weight: bold;
-// 	margin-top: 2rem;
-// 	background-color: $orange;
-// 	color: $casper-dark;
+// 	color: white;
+// 	font-family: 'Halloween', sans-serif;
+// 	font-size: 5em;
+// 	margin: 0;
+// 	text-shadow:
+// 		0 0 5px black,
+// 		0 0 1px $slime,
+// 		5px 10px 10px $slime,
+// 		-5px -5px 15px $slime,
+// 		-2px -2px 10px $slime,
+// 		5px 1px 1px $slime;
 // }
 
 div.details-container {
-	color: white;
-	display: grid;
 	grid-template-columns: 25% 25% 25%;
-	grid-template-rows: 15% 15% 15%;
+	grid-template-rows: auto;
 
 	.step-container {
 		height: fit-content;
@@ -114,19 +81,5 @@ div.details-container {
 	:nth-child(3) {
 		grid-row-start: 3;
 		grid-column-start: 3;
-	}
-
-	.selling-point-container {
-		display: flex;
-
-		.ghost-icon {
-			color: white;
-			width: 1.5rem;
-			height: 1.5rem;
-		}
-
-		h2 {
-			margin: 0;
-		}
 	}
 }
