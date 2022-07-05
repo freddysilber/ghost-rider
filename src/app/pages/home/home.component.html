@@ -1,12 +1,12 @@
 <!-- Title -->
 <div
+	class="flex flex-col self-center w-fit m-0.5"
 	[ghostRiderStep]="{
 		name: 'tour.title',
 		title: 'Welcome!',
 		content: titleTpl
 	}"
 	(click)="startTour()"
-	class="flex flex-col self-center w-fit m-0.5"
 >
 	<!-- class="slime" -->
 	<h1 class="casper text-center w-fit m-0 p-1.5 cursor-pointer text-black font-thin">Ghost Rider</h1>
@@ -30,13 +30,13 @@
 <!-- Details -->
 <div class="details-container text-white grid">
 	<div
+		class="step-container"
 		[ghostRiderStep]="{
 			name: 'tour.routerSupport',
 			title: 'Why Routing?',
 			content: 'It would be frightening if your app didn\'t have multiple pages.',
 			position: 'after'
 		}"
-		class="step-container"
 	>
 		<ng-container *ngTemplateOutlet="sellingPointTpl; context: {
 			$implicit: {
@@ -46,13 +46,13 @@
 		}"></ng-container>
 	</div>
 	<div
+		class="step-container"
 		[ghostRiderStep]="{
 			name: 'tour.zeroDependencies',
 			title: '100% Angular',
 			content: 'No unnecessary packages ship with Ghost Rider.',
 			position: 'right'
 		}"
-		class="step-container"
 	>
 		<ng-container *ngTemplateOutlet="sellingPointTpl; context: {
 			$implicit: {
@@ -62,13 +62,13 @@
 		}"></ng-container>
 	</div>
 	<div
+		class="step-container"
 		[ghostRiderStep]="{
 			name: 'tour.reactiveEvents',
 			title: '💡 Tip!',
 			content: 'Steps can emit events when a tour starts, ends, and navigating to and from other steps. You can learn more in the documentation section.',
 			position: 'after'
 		}"
-		class="step-container"
 	>
 		<ng-container *ngTemplateOutlet="sellingPointTpl; context: {
 			$implicit: {
