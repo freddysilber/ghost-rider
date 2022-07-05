@@ -1,4 +1,5 @@
 import { PortalModule } from '@angular/cdk/portal';
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import {
@@ -15,6 +16,7 @@ import {
 	styleUrls: ['home.component.scss'],
 	standalone: true,
 	imports: [
+		CommonModule,
 		GhostRiderModule,
 		PortalModule,
 		RouterModule,

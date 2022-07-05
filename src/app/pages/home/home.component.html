@@ -10,11 +10,12 @@
 >
 	<!-- class="slime" -->
 	<h1 class="casper">Ghost Rider</h1>
-	<h2 class="subtitle">Create guided tours in Angular</h2>
+	<h2 class="text-2xl subtitle">Create guided tours in Angular</h2>
 </div>
 <!-- Documentation Step / Button -->
+<!-- class="documentation-button" -->
 <button
-	class="documentation-button"
+	class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
 	[ghostRiderStep]="{
 		name: 'tour.documentation',
 		title: 'Let\'s See Some Features!',
@@ -33,53 +34,45 @@
 			title: 'Why Routing?',
 			content: 'It would be frightening if your app didn\'t have multiple pages.'
 		}"
-		style="height: fit-content;"
+		class="step-container"
 	>
-		<h2>
-			<span
-				class="iconify"
-				data-icon="simple-line-icons:ghost"
-				style="color: white;"
-			></span>
-			Router Support
-		</h2>
-		<p>Ghost Rider is reactive so steps won't get ghosted when nagivating to other pages and routes</p>
+		<ng-container *ngTemplateOutlet="sellingPointTpl; context: {
+			$implicit: {
+				title: 'Router Support',
+				text: 'Ghost Rider is reactive so steps won\'t get ghosted when nagivating to other pages and routes'
+			}
+		}"></ng-container>
 	</div>
 	<div
 		[ghostRiderStep]="{
 			name: 'tour.zeroDependencies',
-			title: 'TODO!',
-			content: 'TODO'
+			title: '100% Angular',
+			content: 'No unnecessary packages ship with Ghost Rider.',
+			position: 'right'
 		}"
-		style="height: fit-content;"
+		class="step-container"
 	>
-		<h2>
-			<span
-				class="iconify"
-				data-icon="simple-line-icons:ghost"
-				style="color: white;"
-			></span>
-			Zero Dependencies
-		</h2>
-		<p>Boo-lieve it or not, there are no external libraries haunting us</p>
+		<ng-container *ngTemplateOutlet="sellingPointTpl; context: {
+			$implicit: {
+				title: 'Zero Dependencies',
+				text: 'Boo-lieve it or not, there are no external libraries haunting us'
+			}
+		}"></ng-container>
 	</div>
 	<div
 		[ghostRiderStep]="{
 			name: 'tour.reactiveEvents',
-			title: 'TODO!',
-			content: 'TODO'
+			title: '💡 Tip!',
+			content: 'Steps can emit events when a tour starts, ends, and navigating to and from other steps. You can learn more in the documentation section.'
 		}"
-		style="height: fit-content;"
+		class="step-container"
 	>
-		<h2>
-			<span
-				class="iconify"
-				data-icon="simple-line-icons:ghost"
-				style="color: white;"
-			></span>
-			Reactive Events and Hooks
-		</h2>
-		<p>Each step of a tour provides it's own set of events and hooks for a customizable experience with no dead ends</p>
+		<ng-container *ngTemplateOutlet="sellingPointTpl; context: {
+			$implicit: {
+				title: 'Reactive Events and Hooks',
+				text: 'Each step of a tour provides it\'s own set of events and hooks for a customizable experience with no dead ends'
+			}
+		}"></ng-container>
 	</div>
 </div>
 <!-- Step Templates -->
@@ -96,5 +89,19 @@
 	cdkPortal
 	#documentationTpl="cdkPortal"
 >
-	<p>Click the button or click 'Next' in the step</p>
+	<p>Click the button or click 'Next' in the step.</p>
+</ng-template>
+<!-- Ghost Icon -->
+<ng-template
+	#sellingPointTpl
+	let-details
+>
+	<div class="selling-point-container">
+		<span
+			class="ghost-icon iconify"
+			data-icon="simple-line-icons:ghost"
+		></span>
+		<h2>{{ details.title }}</h2>
+	</div>
+	<p>{{ details.text }}</p>
 </ng-template>
