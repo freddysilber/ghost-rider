@@ -47,8 +47,7 @@ export class HomeComponent {
 					new GhostRiderStep('reactiveEvents'),
 					new GhostRiderStep('documentation'),
 					new GhostRiderStep('docsPage'),
-					new GhostRiderStep('thirdStep'),
-					new GhostRiderStep('fourthStep'),
+					new GhostRiderStep('homeAnchor'),
 				]
 			);
 		}

@@ -1,46 +1,37 @@
-<div class="flex align-center">
-	<div class="flex justify-center m-1">
-		<button
-			class="bg-red-700 hover:bg-red-900 text-white font-bold py-2 px-4 rounded-full"
-			[routerLink]="['/home']"
-		>
-			Home
-		</button>
+<header class="text-gray-600 body-font">
+	<div class="container flex flex-wrap p-5 flex-col md:flex-row items-center">
+		<a class="flex title-font font-medium items-center text-red-900 mb-4 md:mb-0">
+			<img
+				src="assets/images/ghost.svg"
+				style="width: 50px"
+			>
+			<span
+				class="ml-3 text-xl"
+				[ghostRiderStep]="{
+					name: 'tour.docsPage',
+					title: 'Check out the Docs',
+					content: 'This is the documentation page. Ghost Rider can navigate to different routes for us!'
+				}"
+				(ghostRiderStepEvent)="handleEvent($event)"
+			>
+				Ghost Rider
+			</span>
+		</a>
+		<nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
+			<a
+				class="mr-5 hover:text-red-900"
+				[routerLink]="['/home']"
+				[ghostRiderStep]="{
+					name: 'tour.homeAnchor',
+					title: 'Go Back Home',
+					content: 'Click here to go back to the home page.'
+				}"
+			>
+				Home
+			</a>
+		</nav>
 	</div>
-	<h1
-		class="text-white m-5"
-		[ghostRiderStep]="{
-			name: 'tour.docsPage',
-			title: 'Check out the Docs',
-			content: 'This is the documentation page. Ghost Rider can navigate to different routes for us!'
-		}"
-		(ghostRiderStepEvent)="handleEvent($event)"
-	>
-		Docs
-	</h1>
-</div>
-<div style="display: flex">
-	<h1
-		class="text-white m-5"
-		[ghostRiderStep]="{
-			name: 'tour.thirdStep',
-			title: 'Step 3 title',
-			content: 'Step 3 content'
-		}"
-	>
-		Step 3
-	</h1>
-	<h1
-		class="text-white m-5"
-		[ghostRiderStep]="{
-			name: 'tour.fourthStep',
-			title: 'Step 4 Title',
-			content: 'Fourth Step Content'
-		}"
-	>
-		Step 4
-	</h1>
-</div>
+</header>
 <div class="relative overflow-x-auto shadow-md sm:rounded-lg m-3">
 	<table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
 		<thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
@@ -49,31 +40,25 @@
 					scope="col"
 					class="px-6 py-3"
 				>
-					Product name
+					Name
 				</th>
 				<th
 					scope="col"
 					class="px-6 py-3"
 				>
-					Color
+					Type
 				</th>
 				<th
 					scope="col"
 					class="px-6 py-3"
 				>
-					Category
+					Description
 				</th>
 				<th
 					scope="col"
 					class="px-6 py-3"
 				>
-					Price
-				</th>
-				<th
-					scope="col"
-					class="px-6 py-3"
-				>
-					<span class="sr-only">Edit</span>
+					Example
 				</th>
 			</tr>
 		</thead>
@@ -83,22 +68,16 @@
 					scope="row"
 					class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap"
 				>
-					Apple MacBook Pro 17"
+					ghostRiderStepAdvance
 				</th>
 				<td class="px-6 py-4">
-					Sliver
+					Directive
 				</td>
 				<td class="px-6 py-4">
-					Laptop
+					Accepts a click event, emits an event when clicked and navigates to the next step when clicked
 				</td>
 				<td class="px-6 py-4">
-					$2999
-				</td>
-				<td class="px-6 py-4 text-right">
-					<a
-						href="#"
-						class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-					>Edit</a>
+					(ghostRiderStepAdvance)="click()"
 				</td>
 			</tr>
 			<tr class="border-b dark:bg-gray-800 dark:border-gray-700 odd:bg-white even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700">
@@ -106,91 +85,16 @@
 					scope="row"
 					class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap"
 				>
-					Microsoft Surface Pro
+					ghostRiderStepComplete
 				</th>
 				<td class="px-6 py-4">
-					White
+					Directive
 				</td>
 				<td class="px-6 py-4">
-					Laptop PC
+					Completes the tour when clicked
 				</td>
 				<td class="px-6 py-4">
-					$1999
-				</td>
-				<td class="px-6 py-4 text-right">
-					<a
-						href="#"
-						class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-					>Edit</a>
-				</td>
-			</tr>
-			<tr class="border-b dark:bg-gray-800 dark:border-gray-700 odd:bg-white even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700">
-				<th
-					scope="row"
-					class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap"
-				>
-					Magic Mouse 2
-				</th>
-				<td class="px-6 py-4">
-					Black
-				</td>
-				<td class="px-6 py-4">
-					Accessories
-				</td>
-				<td class="px-6 py-4">
-					$99
-				</td>
-				<td class="px-6 py-4 text-right">
-					<a
-						href="#"
-						class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-					>Edit</a>
-				</td>
-			</tr>
-			<tr class="border-b dark:bg-gray-800 dark:border-gray-700 odd:bg-white even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700">
-				<th
-					scope="row"
-					class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap"
-				>
-					Google Pixel Phone
-				</th>
-				<td class="px-6 py-4">
-					Gray
-				</td>
-				<td class="px-6 py-4">
-					Phone
-				</td>
-				<td class="px-6 py-4">
-					$799
-				</td>
-				<td class="px-6 py-4 text-right">
-					<a
-						href="#"
-						class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-					>Edit</a>
-				</td>
-			</tr>
-			<tr class="odd:bg-white even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700">
-				<th
-					scope="row"
-					class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap"
-				>
-					Apple Watch 5
-				</th>
-				<td class="px-6 py-4">
-					Red
-				</td>
-				<td class="px-6 py-4">
-					Wearables
-				</td>
-				<td class="px-6 py-4">
-					$999
-				</td>
-				<td class="px-6 py-4 text-right">
-					<a
-						href="#"
-						class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-					>Edit</a>
+					N/A
 				</td>
 			</tr>
 		</tbody>
