@@ -1,10 +1,7 @@
 <header class="text-gray-600 body-font">
 	<div class="container flex flex-wrap p-5 flex-col md:flex-row items-center">
 		<a class="flex title-font font-medium items-center text-red-900 mb-4 md:mb-0">
-			<img
-				src="assets/images/ghost.svg"
-				style="width: 50px"
-			>
+			<app-logo style="width: 50px;"></app-logo>
 			<span
 				class="ml-3 text-xl"
 				[ghostRiderStep]="{
@@ -63,39 +60,19 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr class="border-b dark:bg-gray-800 dark:border-gray-700 odd:bg-white even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700">
+			<tr
+				*ngFor="let row of rows"
+				class="border-b dark:bg-gray-800 dark:border-gray-700 odd:bg-white even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700"
+			>
 				<th
 					scope="row"
 					class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap"
 				>
-					ghostRiderStepAdvance
+					{{ row.name }}
 				</th>
-				<td class="px-6 py-4">
-					Directive
-				</td>
-				<td class="px-6 py-4">
-					Accepts a click event, emits an event when clicked and navigates to the next step when clicked
-				</td>
-				<td class="px-6 py-4">
-					(ghostRiderStepAdvance)="click()"
-				</td>
-			</tr>
-			<tr class="border-b dark:bg-gray-800 dark:border-gray-700 odd:bg-white even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700">
-				<th
-					scope="row"
-					class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap"
-				>
-					ghostRiderStepComplete
-				</th>
-				<td class="px-6 py-4">
-					Directive
-				</td>
-				<td class="px-6 py-4">
-					Completes the tour when clicked
-				</td>
-				<td class="px-6 py-4">
-					N/A
-				</td>
+				<td class="px-6 py-4">{{ row.type }}</td>
+				<td class="px-6 py-4">{{ row.description }}</td>
+				<td class="px-6 py-4">{{ row.example || 'N/A' }}</td>
 			</tr>
 		</tbody>
 	</table>
