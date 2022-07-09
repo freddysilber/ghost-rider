@@ -65,17 +65,17 @@ const SECTIONS: Section[] = [
 			{
 				name: 'title',
 				type: 'string',
-				description: `The text to display as the 'title' on the step`,
+				description: `Text that is displayed for the step title`,
 			},
 			{
 				name: 'backButtonLabel',
 				type: 'string',
-				description: `The text to display on the back button`,
+				description: `Label for the back button`,
 			},
 			{
 				name: 'nextButtonLabel',
 				type: 'string',
-				description: `The text to display on the next button`,
+				description: `Label for the next button`,
 			},
 			{
 				name: 'shouldRegister',
