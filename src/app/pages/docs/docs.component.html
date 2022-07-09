@@ -29,51 +29,54 @@
 		</nav>
 	</div>
 </header>
-<div class="relative overflow-x-auto shadow-md sm:rounded-lg m-3">
-	<table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-		<thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-			<tr>
-				<th
-					scope="col"
-					class="px-6 py-3"
+<ng-container *ngFor="let section of sections">
+	<h1 class="text-white ml-4">{{ section.name }}</h1>
+	<div class="relative overflow-x-auto shadow-md sm:rounded-lg m-3">
+		<table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+			<thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+				<tr>
+					<th
+						scope="col"
+						class="px-6 py-3"
+					>
+						Name
+					</th>
+					<th
+						scope="col"
+						class="px-6 py-3"
+					>
+						Type
+					</th>
+					<th
+						scope="col"
+						class="px-6 py-3"
+					>
+						Description
+					</th>
+					<th
+						scope="col"
+						class="px-6 py-3"
+					>
+						Example
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr
+					*ngFor="let row of section.rows"
+					class="border-b dark:bg-gray-800 dark:border-gray-700 odd:bg-white even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700"
 				>
-					Name
-				</th>
-				<th
-					scope="col"
-					class="px-6 py-3"
-				>
-					Type
-				</th>
-				<th
-					scope="col"
-					class="px-6 py-3"
-				>
-					Description
-				</th>
-				<th
-					scope="col"
-					class="px-6 py-3"
-				>
-					Example
-				</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr
-				*ngFor="let row of rows"
-				class="border-b dark:bg-gray-800 dark:border-gray-700 odd:bg-white even:bg-gray-50 odd:dark:bg-gray-800 even:dark:bg-gray-700"
-			>
-				<th
-					scope="row"
-					class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap"
-				>
-					{{ row.name }}
-				</th>
-				<td class="px-6 py-4">{{ row.type }}</td>
-				<td class="px-6 py-4">{{ row.description }}</td>
-				<td class="px-6 py-4">{{ row.example || 'N/A' }}</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
+					<th
+						scope="row"
+						class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap"
+					>
+						{{ row.name }}
+					</th>
+					<td class="px-6 py-4">{{ row.type }}</td>
+					<td class="px-6 py-4">{{ row.description }}</td>
+					<td class="px-6 py-4">{{ row.example || 'N/A' }}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</ng-container>

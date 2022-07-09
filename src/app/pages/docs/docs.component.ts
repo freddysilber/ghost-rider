@@ -11,17 +11,48 @@ type Row = {
 	example?: string;
 };
 
-const ROWS: Row[] = [
+type Section = {
+	name: string;
+	rows: Row[];
+};
+
+const SECTIONS: Section[] = [
 	{
-		name: 'ghostRiderStepAdvance',
-		type: 'Directive',
-		description: 'Accepts a click event, emits an event when clicked and navigates to the next step when clicked',
-		example: '(ghostRiderStepAdvance)="click()"',
+		name: 'Directives',
+		rows: [
+			{
+				name: 'ghostRiderStepAdvance',
+				type: 'Directive',
+				description: 'Accepts a click event, emits an event when clicked and navigates to the next step when clicked',
+				example: '(ghostRiderStepAdvance)="click()"',
+			},
+			{
+				name: 'ghostRiderStepComplete',
+				type: 'Directive',
+				description: 'Completes the tour when clicked',
+			},
+		],
 	},
 	{
-		name: 'ghostRiderStepComplete',
-		type: 'Directive',
-		description: 'Completes the tour when clicked',
+		name: 'Outputs',
+		rows: [
+			{
+				name: 'ghostRiderStepEvent',
+				type: 'Output',
+				description: 'Emits an event when a step is Started, Next, Back, Close or Complete',
+				example: '(ghostRiderStepEvent)="handleEvent()"',
+			},
+		],
+	},
+	{
+		name: 'Step Options',
+		rows: [
+			{
+				name: 'name',
+				type: 'string',
+				description: `The name of the step (should be 'namespaced' to scope step names specific tours. ie. 'tourname.firststep')`,
+			},
+		],
 	},
 ];
 
@@ -38,7 +69,7 @@ const ROWS: Row[] = [
 	],
 })
 export class DocsComponent {
-	public rows: Row[] = ROWS;
+	public sections: Section[] = SECTIONS;
 
 	constructor(
 		private readonly _router: Router,

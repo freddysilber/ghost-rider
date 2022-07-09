@@ -42,7 +42,9 @@ export class GhostRiderService implements OnDestroy {
   private _hideStep: () => Observable<void>;
   private _removeWindowHandler: () => void;
 
-  // Flag that the tour is in flight. Once the tour is closed or skipped, this will be false
+  /**
+   * Flag that the tour is in flight. Once the tour is closed or skipped, this will be false
+   */
   public readonly activeTour$ = new BehaviorSubject(false);
 
   public events$ = new Subject<GhostRiderEvent>();
