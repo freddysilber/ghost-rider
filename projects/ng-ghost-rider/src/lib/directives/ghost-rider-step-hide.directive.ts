@@ -1,6 +1,9 @@
 import { Directive, HostListener } from '@angular/core';
 import { GhostRiderService } from '../providers/ghost-rider.service';
 
+/**
+ * Hides the current step when clicked
+ */
 @Directive({ selector: '[ghostRiderStepHide]' })
 export class GhostRiderStepHideDirective {
   constructor(

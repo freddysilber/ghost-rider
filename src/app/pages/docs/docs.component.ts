@@ -31,6 +31,16 @@ const SECTIONS: Section[] = [
 				type: 'Directive',
 				description: 'Completes the tour when clicked',
 			},
+			{
+				name: 'ghostRiderStepHide',
+				type: 'Directive',
+				description: 'Hides the step when clicked',
+			},
+			{
+				name: 'ghostRiderStepPrevious',
+				type: 'Directive',
+				description: 'Goes to the previous step when clicked',
+			},
 		],
 	},
 	{

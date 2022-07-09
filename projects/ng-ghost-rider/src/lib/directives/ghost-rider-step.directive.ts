@@ -5,6 +5,11 @@ import { GhostRiderStepDetails } from '../models/ghost-rider-step-details.model'
 import { GhostRiderEvent } from '../models/ghost-rider-step-event.model';
 import { BehaviorSubject, Subscription } from 'rxjs';
 
+/**
+ * Directive to make an element a step in the tour.
+ * 
+ * @param ghostRiderStep - Config object to customize the step
+ */
 @Directive({ selector: '[ghostRiderStep]' })
 export class GhostRiderStepDirective<T = any> implements GhostRiderStepDetails, OnInit, OnDestroy {
   @Input() // Might want to remove the 'Partial'
