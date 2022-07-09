@@ -62,6 +62,61 @@ const SECTIONS: Section[] = [
 				type: 'string',
 				description: `The name of the step (should be 'namespaced' to scope step names specific tours. ie. 'tourname.firststep')`,
 			},
+			{
+				name: 'title',
+				type: 'string',
+				description: `The text to display as the 'title' on the step`,
+			},
+			{
+				name: 'backButtonLabel',
+				type: 'string',
+				description: `The text to display on the back button`,
+			},
+			{
+				name: 'nextButtonLabel',
+				type: 'string',
+				description: `The text to display on the next button`,
+			},
+			{
+				name: 'shouldRegister',
+				type: 'boolean',
+				description: `Flag if the step should get 'registered' as soon as possible`,
+			},
+			{
+				name: 'backIsDisabled',
+				type: 'boolean',
+				description: `Flag to disable the back step action`,
+			},
+			{
+				name: 'nextIsDisabled',
+				type: 'boolean',
+				description: `Flag to disable the next step action`,
+			},
+			{
+				name: 'nextIsHide',
+				type: 'boolean',
+				description: `Flag to hide the step when the next button is clicked`,
+			},
+			{
+				name: 'position',
+				type: 'PopoverPosition',
+				description: `Postion for the popover. See Angular tooltip: https://github.com/angular/components/blob/main/src/material/tooltip/tooltip.ts `,
+			},
+			{
+				name: 'nubbinPosition',
+				type: 'PopoverNubbinPosition',
+				description: `Position for the nubbin`,
+			},
+			{
+				name: 'content',
+				type: 'PopoverContent',
+				description: `Step's content. This can be a string, a TemplatePortal, or a ComponentPortal`,
+			},
+			{
+				name: 'beforeActivate',
+				type: 'function',
+				description: `Function to run before the popover is shown. 'popover.show(0)'`,
+			},
 		],
 	},
 ];
